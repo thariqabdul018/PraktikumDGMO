@@ -1,3 +1,5 @@
+4210161018 Thariq Abdul Ilah
+
 Belum selesai, masih dalam pengerjakan enkapsulasinya
 
 Enkapsulasi gim CSGO
