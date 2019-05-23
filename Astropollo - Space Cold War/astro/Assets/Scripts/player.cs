@@ -32,7 +32,7 @@ public class player : MonoBehaviour {
 			gasValue = 100;
 		}
 
-		if (Input.GetKeyDown (KeyCode.A) && gasValue > 15) {
+		/*if (Input.GetKeyDown (KeyCode.A) && gasValue > 15) {
 			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 			GetComponent<Rigidbody2D> ().AddForce (jumpForce);
 			gasValue -= 15;
@@ -42,7 +42,7 @@ public class player : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.S)) {
 			GameObject bullet = (GameObject)Instantiate (projectilePrefab, transform.position, Quaternion.identity);
 			Projectiles.Add (bullet);
-		}
+		}*/
 
 		for (int i = 0; i < Projectiles.Count; i++) {
 			GameObject goBullet = Projectiles [i];
@@ -99,4 +99,19 @@ public class player : MonoBehaviour {
         }
     }*/
 
+    public void menColot()
+    {
+        if (gasValue > 15)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<Rigidbody2D>().AddForce(jumpForce);
+            gasValue -= 15;
+        }
+    }
+
+    public void meNembak()
+    {
+        GameObject bullet = (GameObject)Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Projectiles.Add(bullet);
+    }
 }
