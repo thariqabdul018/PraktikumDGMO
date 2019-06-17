@@ -11,9 +11,10 @@ public class launcher : MonoBehaviourPunCallbacks
     public GameObject PleaseWait;
 
     // Start is called before the first frame update
-    void Start()
+    public void On_Connect()
     {
         PhotonNetwork.ConnectUsingSettings();
+        Debug.Log("Iki Konek Cok");
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class launcher : MonoBehaviourPunCallbacks
         disconnectedScreen.SetActive(true);
         PleaseWait.SetActive(false);
         connectedScreen.SetActive(false);
+        Debug.Log("Iki Gak Konek");
     }
 
     public override void OnJoinedLobby()

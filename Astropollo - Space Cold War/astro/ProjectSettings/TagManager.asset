@@ -4,14 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - tanah
-  - player
-  - bullet
-  - Player1
   - Player2
-  - pyOneWin
+  - tanah
   - pesawatP1
   - pesawatP2
+  - Player1
+  - bullet
+  - bullet2
   layers:
   - Default
   - TransparentFX
@@ -21,13 +20,13 @@ TagManager:
   - UI
   - 
   - 
-  - tanah
-  - player1
-  - bullet1
-  - player2
-  - bullet2
-  - pesawatP1
-  - pesawatP2
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

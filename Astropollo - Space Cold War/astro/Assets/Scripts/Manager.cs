@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class Manager : MonoBehaviour
+public class Manager : MonoBehaviourPun
 {
     public GameObject playerPrefab1;
     public GameObject playerPrefab2;
@@ -11,18 +11,24 @@ public class Manager : MonoBehaviour
     public Transform Spawn2;
     void Start()
     {
-        SpawnPlayer1();
-        SpawnPlayer2();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            SpawnPlayer1();
+        }
+        else
+        {
+            SpawnPlayer2();
+        }
     }
 
     // Update is called once per frame
     void SpawnPlayer1()
     {
-        PhotonNetwork.Instantiate(playerPrefab1.name, Spawn1.position, playerPrefab1.transform.rotation);
+        playerPrefab1 = PhotonNetwork.Instantiate(playerPrefab1.name, Spawn1.transform.position, Quaternion.identity, 0);
     }
 
     void SpawnPlayer2()
     {
-        PhotonNetwork.Instantiate(playerPrefab2.name, Spawn2.position, playerPrefab2.transform.rotation);
+        playerPrefab2 = PhotonNetwork.Instantiate(playerPrefab2.name, Spawn2.transform.position, Quaternion.identity, 0);
     }
 }
