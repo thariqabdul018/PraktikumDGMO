@@ -2,18 +2,20 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
-    <ProjectGuid>{B3B96AAB-D8DA-1AED-6A63-24058AB68D65}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectGuid>{94B2631A-E73D-AABA-E1C8-6ECC989D8338}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -53,730 +55,927 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\AsteroidsGame.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\Asteroid.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\AsteroidsGameManager.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\Bullet.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\PlayerOverviewPanel.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\Spaceship.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\LobbyMainPanel.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\LobbyTopPanel.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\PlayerListEntry.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\RoomListEntry.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoHub\Scripts\DemoHubManager.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoHub\Scripts\ToDemoHubButton.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\Block.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\Cluster.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\IngameControlPanel.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\Noise.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\ProceduralController.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\WorldGenerator.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Bezier.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\BezierControlPointMode.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\BezierCurve.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\BezierSpline.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Line.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\SplinePosition.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\SplineWalker.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\PlayerControl.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\SlotLanes.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\SlotRacerSplashScreen.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\CameraWork.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\Launcher.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\LoaderAnime.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerAnimatorManager.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerManager.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerNameInputField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerUI.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\ConnectToRegionUIForm.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\CreateRoomUiForm.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\LoadLevelUIForm.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\SetRoomCustomPropertyUIForm.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\UserIdUiForm.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\PunCockpit.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\AutoSyncSceneToggle.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\BackgroundTimeOutField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\CrcCheckToggle.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\DocLinkButton.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\GameVersionField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\BoolInputField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\IntInputField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\StringInputField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\ToggleExpand.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\LayoutElementMatchSize.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\NickNameField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\OnlineDocButton.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\SendRateField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\SendRateOnSerializeField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Controllers\PlayerDetailsController.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\InfosPanelPlaceholder.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\FriendListCell.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\FriendListView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\PlayerListCell.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\PlayerListView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\PropertyCell.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RegionListCell.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RegionListView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RoomListCell.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RoomListView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\PropertyFields\UserIdField.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\AppVersionProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\BestRegionInPrefsProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CloudRegionProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfPlayersInRoomProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfPlayersOnMasterProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfPlayersProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfRoomsProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomAutoCleanupProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomEmptyRoomTtlProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomExpectedUsersProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomIsOfflineProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomIsOpenProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomIsVisibleProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomMasterClientIdProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomMaxPlayersProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomNameProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomPlayerCountProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomPlayerTtlProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomPropertiesListedInLobbyProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\GameVersionProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\IsConnectedAndReadyProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\IsConnectedProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\OfflineModeProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\PingProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\PropertyListenerBase.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\ServerAddressProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\ServerProperty.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ScoreHelper.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ThirdParty\PunCockpitEmbed.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\Shared Assets\Scripts\DocLinks.cs" />
-     <Compile Include="Assets\Scripts\bullet.cs" />
-     <Compile Include="Assets\Scripts\bullet2.cs" />
-     <Compile Include="Assets\Scripts\GameSerttings.cs" />
-     <Compile Include="Assets\Scripts\GasValue.cs" />
-     <Compile Include="Assets\Scripts\launcher.cs" />
-     <Compile Include="Assets\Scripts\Manager.cs" />
-     <Compile Include="Assets\Scripts\o2countdown.cs" />
-     <Compile Include="Assets\Scripts\pesawat1.cs" />
-     <Compile Include="Assets\Scripts\pesawat2.cs" />
-     <Compile Include="Assets\Scripts\PhotonPlayer.cs" />
-     <Compile Include="Assets\Scripts\player.cs" />
-     <Compile Include="Assets\Scripts\player2.cs" />
-     <Compile Include="Assets\Scripts\score.cs" />
-     <Compile Include="Assets\Scripts\UIHendler.cs" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Kenney Assets\Copyrights.txt" />
-     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
-     <None Include="Assets\Photon\PhotonLibs\release_history.txt" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\Demos\Shared Assets\Skin\eurof_tt.txt" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\Demos\Shared Assets\Skin\3dText.shader" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AIModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ARModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AccessibilityModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AnimationModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AssetBundleModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AudioModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.BaselibModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClothModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.CoreModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.CrashReportingModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.DirectorModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.FileSystemHttpModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GameCenterModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GridModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HotReloadModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.IMGUIModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ImageConversionModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.InputModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.JSONSerializeModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.LocalizationModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ParticleSystemModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PerformanceReportingModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PhysicsModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Physics2DModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ProfilerModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ScreenCaptureModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SharedInternalsModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTrackingModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpriteMaskModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpriteShapeModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.StreamingModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.StyleSheetsModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SubstanceModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TLSModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TerrainModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TerrainPhysicsModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TextCoreModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TextRenderingModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TilemapModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TimelineModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIElementsModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UNETModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UmbraModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityAnalyticsModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityConnectModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityTestProtocolModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestAudioModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestTextureModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestWWWModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VFXModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VRModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VehiclesModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VideoModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.WindModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XRModule">
- <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Locator">
- <HintPath>E:/UNITY/Editor/Data/Managed/Unity.Locator.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Photon3Unity3D">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
- </Reference>
- <Reference Include="websocket-sharp">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>D:/FD/Tugas/Unity/AstroPollo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="netstandard">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.Win32.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.AppContext">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections.Concurrent">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections.NonGeneric">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections.Specialized">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
- </Reference>
- <Reference Include="System.ComponentModel">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll</HintPath>
- </Reference>
- <Reference Include="System.ComponentModel.EventBasedAsync">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
- </Reference>
- <Reference Include="System.ComponentModel.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.ComponentModel.TypeConverter">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
- </Reference>
- <Reference Include="System.Console">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll</HintPath>
- </Reference>
- <Reference Include="System.Data.Common">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.Contracts">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.Debug">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.FileVersionInfo">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.Process">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.StackTrace">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.TextWriterTraceListener">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.Tools">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.TraceSource">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.Tracing">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
- </Reference>
- <Reference Include="System.Drawing.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.Dynamic.Runtime">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="System.Globalization.Calendars">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
- </Reference>
- <Reference Include="System.Globalization">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll</HintPath>
- </Reference>
- <Reference Include="System.Globalization.Extensions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.Compression">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.Compression.ZipFile">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
- </Reference>
- <Reference Include="System.IO">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.FileSystem">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.FileSystem.DriveInfo">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.FileSystem.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.FileSystem.Watcher">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.IsolatedStorage">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.MemoryMappedFiles">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.Pipes">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.UnmanagedMemoryStream">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
- </Reference>
- <Reference Include="System.Linq">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll</HintPath>
- </Reference>
- <Reference Include="System.Linq.Expressions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
- </Reference>
- <Reference Include="System.Linq.Parallel">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
- </Reference>
- <Reference Include="System.Linq.Queryable">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Http">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.NameResolution">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.NetworkInformation">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Ping">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Requests">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Security">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Sockets">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.WebHeaderCollection">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.WebSockets.Client">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.WebSockets">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
- </Reference>
- <Reference Include="System.ObjectModel">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll</HintPath>
- </Reference>
- <Reference Include="System.Reflection">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll</HintPath>
- </Reference>
- <Reference Include="System.Reflection.Extensions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="System.Reflection.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.Resources.Reader">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
- </Reference>
- <Reference Include="System.Resources.ResourceManager">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
- </Reference>
- <Reference Include="System.Resources.Writer">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.CompilerServices.VisualC">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Extensions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Handles">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.InteropServices">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Numerics">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization.Formatters">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization.Json">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization.Xml">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Claims">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Cryptography.Algorithms">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Cryptography.Csp">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Cryptography.Encoding">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Cryptography.Primitives">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Cryptography.X509Certificates">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Principal">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.SecureString">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
- </Reference>
- <Reference Include="System.Text.Encoding">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
- </Reference>
- <Reference Include="System.Text.Encoding.Extensions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="System.Text.RegularExpressions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.Overlapped">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.Tasks">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.Tasks.Parallel">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.Thread">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.ThreadPool">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.Timer">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
- </Reference>
- <Reference Include="System.ValueTuple">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.ReaderWriter">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.XDocument">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.XmlDocument">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.XmlSerializer">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.XPath">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.XPath.XDocument">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
- </Reference>
- <Reference Include="System.Numerics.Vectors">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
- </Reference>
- <Reference Include="mscorlib">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
- </Reference>
- <Reference Include="System.ComponentModel.Composition">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
- </Reference>
- <Reference Include="System.Core">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll</HintPath>
- </Reference>
- <Reference Include="System.Data">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll</HintPath>
- </Reference>
- <Reference Include="System">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll</HintPath>
- </Reference>
- <Reference Include="System.Drawing">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.Compression.FileSystem">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
- </Reference>
- <Reference Include="System.Net">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll</HintPath>
- </Reference>
- <Reference Include="System.Numerics">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="System.ServiceModel.Web">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
- </Reference>
- <Reference Include="System.Transactions">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll</HintPath>
- </Reference>
- <Reference Include="System.Web">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll</HintPath>
- </Reference>
- <Reference Include="System.Windows">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.Linq">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.Serialization">
- <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\CommonStatusCodes.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\CommonTypes.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\DummyClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Events\IEvent.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Events\IEventsClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\IPlayGamesClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\LeaderboardScoreData.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\Invitation.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\IRealTimeMultiplayerClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\ITurnBasedMultiplayerClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\MatchOutcome.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\Participant.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\Player.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\RealTimeMultiplayerListener.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Multiplayer\TurnBasedMatch.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\AdvertisingResult.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\ConnectionRequest.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\ConnectionResponse.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\DummyNearbyConnectionClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\EndpointDetails.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\INearbyConnectionClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\NearbyConnectionConfiguration.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\PlayerStats.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\PlayGamesClientConfiguration.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\SavedGame\ISavedGameClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\SavedGame\ISavedGameMetadata.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\SavedGame\SavedGameMetadataUpdate.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\ScorePageToken.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Video\CaptureOverlayStateListener.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Video\IVideoClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Video\VideoCapabilities.cs" />
+    <Compile Include="Assets\GooglePlayGames\BasicApi\Video\VideoCaptureState.cs" />
+    <Compile Include="Assets\GooglePlayGames\GameInfo.cs" />
+    <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesAchievement.cs" />
+    <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesLeaderboard.cs" />
+    <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesLocalUser.cs" />
+    <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesPlatform.cs" />
+    <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesScore.cs" />
+    <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesUserProfile.cs" />
+    <Compile Include="Assets\GooglePlayGames\OurUtils\Logger.cs" />
+    <Compile Include="Assets\GooglePlayGames\OurUtils\Misc.cs" />
+    <Compile Include="Assets\GooglePlayGames\OurUtils\PlatformUtils.cs" />
+    <Compile Include="Assets\GooglePlayGames\OurUtils\PlayGamesHelperObject.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\AndroidTokenClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Developers\JavaInterfaceProxy.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Developers\JavaObjWrapper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\Api\GoogleApiClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\Api\PendingResult.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\Api\Result.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\Api\ResultCallback.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\Api\ResultCallbackProxy.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\Api\Status.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Common\ConnectionResult.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Games\Games.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Games\Stats\LoadPlayerStatsResultObject.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Games\Stats\PlayerStats.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Games\Stats\PlayerStatsObject.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Games\Stats\Stats.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Android\Gms\Games\Stats\StatsObject.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\CallbackUtils.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\ConversionUtils.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Achievement.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\AchievementManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\AndroidPlatformConfiguration.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Builder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\CaptureOverlayStateListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\CommonErrorStatus.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\EndpointDiscoveryListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Event.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\EventManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\GameServices.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\InternalHooks.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Leaderboard.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\LeaderboardManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\MessageListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\MultiplayerInvitation.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\MultiplayerParticipant.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\NearbyConnections.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\NearbyConnectionsBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\NearbyConnectionsStatus.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\NearbyConnectionTypes.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\ParticipantResults.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Player.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\PlayerManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\PlayerStats.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\RealTimeEventListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\RealTimeMultiplayerManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\RealTimeRoom.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\RealTimeRoomConfig.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\RealTimeRoomConfigBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Score.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\ScorePage.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\ScoreSummary.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Sentinels.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\SnapshotManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\SnapshotMetadata.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\SnapshotMetadataChange.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\SnapshotMetadataChangeBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\StatsManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Status.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\SymbolLocation.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\TurnBasedMatch.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\TurnBasedMatchConfig.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\TurnBasedMatchConfigBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\TurnBasedMultiplayerManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\Types.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\VideoCapabilities.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\VideoCaptureState.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Cwrapper\VideoManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\JavaUtils.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeEventClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeNearbyConnectionClientFactory.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeNearbyConnectionsClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeRealtimeMultiplayerClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeSavedGameClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeTurnBasedMultiplayerClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\NativeVideoClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\AchievementManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\AndroidPlatformConfiguration.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\BaseReferenceHolder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\Callbacks.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\CaptureOverlayStateListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\EventManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\GameServices.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\GameServicesBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\LeaderboardManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\MultiplayerInvitation.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\MultiplayerParticipant.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeAchievement.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeAppIdentifier.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeConnectionRequest.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeConnectionResponse.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeEndpointDetails.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeEndpointDiscoveryListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeEvent.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeLeaderboard.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeMessageListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativePlayer.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativePlayerStats.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeRealTimeRoom.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeScore.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeScoreEntry.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeScorePage.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeScorePageToken.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeScoreSummary.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeSnapshotMetadata.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeSnapshotMetadataChange.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeStartAdvertisingResult.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeTurnBasedMatch.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeVideoCapabilities.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NativeVideoCaptureState.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NearbyConnectionsManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\NearbyConnectionsManagerBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\ParticipantResults.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\PInvokeUtilities.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\PlatformConfiguration.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\PlayerManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\PlayerSelectUIResponse.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\RealTimeEventListenerHelper.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\RealtimeManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\RealtimeRoomConfig.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\RealtimeRoomConfigBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\SnapshotManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\StatsManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\TurnBasedManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\TurnBasedMatchConfig.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\TurnBasedMatchConfigBuilder.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\PInvoke\VideoManager.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Platforms\Android\AndroidClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\Platforms\IClientImpl.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\Native\UnsupportedSavedGamesClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\NearbyConnectionClientFactory.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\PlayGamesClientFactory.cs" />
+    <Compile Include="Assets\GooglePlayGames\Platforms\TokenClient.cs" />
+    <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
+    <Compile Include="Assets\GPGSIds.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\AsteroidsGame.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\Asteroid.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\AsteroidsGameManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\Bullet.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\PlayerOverviewPanel.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Game\Spaceship.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\LobbyMainPanel.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\LobbyTopPanel.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\PlayerListEntry.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoAsteroids\Scripts\Lobby\RoomListEntry.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoHub\Scripts\DemoHubManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoHub\Scripts\ToDemoHubButton.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\Block.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\Cluster.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\IngameControlPanel.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\Noise.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\ProceduralController.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoProcedural\Scripts\WorldGenerator.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Bezier.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\BezierControlPointMode.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\BezierCurve.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\BezierSpline.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Line.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\SplinePosition.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\SplineWalker.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\PlayerControl.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\SlotLanes.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\SlotRacerSplashScreen.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\CameraWork.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\Launcher.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\LoaderAnime.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerAnimatorManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerNameInputField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunBasics-Tutorial\Scripts\PlayerUI.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\ConnectToRegionUIForm.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\CreateRoomUiForm.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\LoadLevelUIForm.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\SetRoomCustomPropertyUIForm.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Forms\UserIdUiForm.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\PunCockpit.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\AutoSyncSceneToggle.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\BackgroundTimeOutField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\CrcCheckToggle.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\DocLinkButton.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\GameVersionField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\BoolInputField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\IntInputField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\StringInputField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\Generic\ToggleExpand.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\LayoutElementMatchSize.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\NickNameField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\OnlineDocButton.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\SendRateField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Autonomous UI\SendRateOnSerializeField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Controllers\PlayerDetailsController.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\InfosPanelPlaceholder.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\FriendListCell.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\FriendListView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\PlayerListCell.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\PlayerListView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\PropertyCell.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RegionListCell.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RegionListView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RoomListCell.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\Lists\RoomListView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\PropertyFields\UserIdField.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\AppVersionProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\BestRegionInPrefsProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CloudRegionProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfPlayersInRoomProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfPlayersOnMasterProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfPlayersProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CountOfRoomsProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomAutoCleanupProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomEmptyRoomTtlProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomExpectedUsersProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomIsOfflineProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomIsOpenProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomIsVisibleProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomMasterClientIdProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomMaxPlayersProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomNameProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomPlayerCountProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomPlayerTtlProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\CurrentRoomPropertiesListedInLobbyProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\GameVersionProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\IsConnectedAndReadyProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\IsConnectedProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\OfflineModeProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\PingProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\PropertyListenerBase.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\ServerAddressProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ReadOnlyProperties\ServerProperty.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ScoreHelper.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\PunCockpit\Scripts\ThirdParty\PunCockpitEmbed.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\Shared Assets\Scripts\DocLinks.cs" />
+    <Compile Include="Assets\Scripts\bullet.cs" />
+    <Compile Include="Assets\Scripts\bullet2.cs" />
+    <Compile Include="Assets\Scripts\GameSerttings.cs" />
+    <Compile Include="Assets\Scripts\GasValue.cs" />
+    <Compile Include="Assets\Scripts\launcher.cs" />
+    <Compile Include="Assets\Scripts\Manager.cs" />
+    <Compile Include="Assets\Scripts\o2countdown.cs" />
+    <Compile Include="Assets\Scripts\pesawat1.cs" />
+    <Compile Include="Assets\Scripts\pesawat2.cs" />
+    <Compile Include="Assets\Scripts\PhotonPlayer.cs" />
+    <Compile Include="Assets\Scripts\player.cs" />
+    <Compile Include="Assets\Scripts\player2.cs" />
+    <Compile Include="Assets\Scripts\score.cs" />
+    <Compile Include="Assets\Scripts\UIHendler.cs" />
+    <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
+    <None Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Kenney Assets\Copyrights.txt" />
+    <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
+    <None Include="Assets\Photon\PhotonLibs\release_history.txt" />
+    <None Include="Assets\Photon\PhotonUnityNetworking\Demos\Shared Assets\Skin\eurof_tt.txt" />
+    <None Include="Assets\Photon\PhotonUnityNetworking\Demos\Shared Assets\Skin\3dText.shader" />
+    <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
+    <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
+    <None Include="Assets\GooglePlayGames\Plugins\Android\GooglePlayGamesManifest.plugin\AndroidManifest.xml" />
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTrackingModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>E:/UNITY/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Locator">
+      <HintPath>E:/UNITY/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>E:/UNITY/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>D:/FD/Tugas/Unity/SCW/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>E:/UNITY/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{D648E95F-D8AF-0A16-E2D7-A3119CBA48EA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{053DCF31-77D6-C999-FD69-87FF9ED70BF8}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{6015D415-53FB-14E7-0FB0-697B480D476A}</Project>      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>    </ProjectReference>
+      <Project>{34034C19-A078-0D87-70D8-C28F22D30F5F}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{DBF3AB15-E0A8-639F-43ED-DD9F7F283064}</Project>      <Name>PhotonUnityNetworking.Utilities</Name>    </ProjectReference>
+      <Project>{02EA100B-6B33-5EF6-F2A2-8A661BF421B5}</Project>
+      <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonWebSocket.csproj">
-      <Project>{E88DF85B-50B0-7457-4B65-E46FFBB827C8}</Project>      <Name>PhotonWebSocket</Name>    </ProjectReference>
+      <Project>{041F0662-23DA-0FA5-9E2D-55CEC96DBF5D}</Project>
+      <Name>PhotonWebSocket</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{CE61CD50-ADF9-65CD-36B6-9F720AE0E86C}</Project>      <Name>PhotonRealtime</Name>    </ProjectReference>
+      <Project>{2B780489-2DD5-2ECC-6ED2-4BB653B50DFC}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{7D5CD869-56A1-B4F8-709D-671B788A41D4}</Project>      <Name>PhotonUnityNetworking</Name>    </ProjectReference>
+      <Project>{546EE9A0-F15E-F8F0-71C1-B63B8501988E}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{1D9074B2-2271-98BC-7323-F30DF4D5E884}</Project>      <Name>PhotonChat</Name>    </ProjectReference>
+      <Project>{0A0AF85F-76E1-BE01-5543-8D2ADFFCF6AD}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{1547A82C-F6EF-EA43-DDB1-2CC730E1EF77}</Project>      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>    </ProjectReference>
+      <Project>{6F488C88-2DE8-8793-4C73-BC704AD4CA3A}</Project>
+      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{140387B3-8029-0894-3A51-882DE14ABBAE}</Project>      <Name>PhotonUnityNetworking.Editor</Name>    </ProjectReference>
+      <Project>{FC976A47-633B-C15B-EDE9-DE9A4738AB7E}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -786,5 +985,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

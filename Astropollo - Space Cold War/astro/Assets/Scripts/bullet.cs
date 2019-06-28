@@ -25,43 +25,133 @@ public class bullet : MonoBehaviourPun
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player2" || collision.gameObject.tag == "pesawatP2")
+        if (this.gameObject.tag == "Bullet")
         {
-            Die();
-        }
-
-        if (this.gameObject.tag == "bullet") {
-            if (collision.gameObject.tag == "bullet2")
+            if (collision.gameObject.tag == "Bullets")
             {
                 Destroy(collision.gameObject);
             }
-        }
 
-        else if (this.gameObject.tag == "bullet2")
+            if (collision.gameObject.tag == "Player2" || collision.gameObject.tag == "pesawatP2")
+            {
+                score.scorePyOne += 1;
+                Destroy(this.gameObject);
+            }
+        }
+        else if (this.gameObject.tag == "Bullets")
         {
-            if (collision.gameObject.tag == "bullet")
+            if (collision.gameObject.tag == "Bullet")
             {
                 Destroy(collision.gameObject);
             }
+
+            if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "pesawatP1")
+            {
+                score.scorePyTwo += 1;
+                Destroy(this.gameObject);
+            }
         }
-    }
 
-    void Die()
-    {
-        score.scorePyOne += 1;
-    }
-
-    void Update()
-    {
-        if (PhotonNetwork.IsMasterClient)
+        /*if (photonView.IsMine)
         {
-            transform.Translate(Vector2.right * Time.deltaTime * speed);
+            if (gameObject.tag == "Bullet")
+            {
+                if (collision.gameObject.tag == "Bullets")
+                {
+                    Destroy(collision.gameObject);
+                }
+
+                if (collision.gameObject.tag == "Player2" || collision.gameObject.tag == "pesawatP2")
+                {
+                    score.scorePyOne += 1;
+                    Destroy(this.gameObject);
+                }
+            }
+            else if (gameObject.tag == "Bullets")
+            {
+                if (collision.gameObject.tag == "Bullet")
+                {
+                    Destroy(collision.gameObject);
+                }
+
+                if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "pesawatP1")
+                {
+                    score.scorePyTwo += 1;
+                    Destroy(this.gameObject);
+                }
+            }
         }
         else
         {
-            transform.Translate(Vector2.left * Time.deltaTime * speed);
+            if (gameObject.tag == "Bullets")
+            {
+                if (collision.gameObject.tag == "Bullet")
+                {
+                    Destroy(collision.gameObject);
+                }
+
+                if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "pesawatP1")
+                {
+                    score.scorePyTwo += 1;
+                    Destroy(this.gameObject);
+                }
+            }
+            else if (gameObject.tag == "Bullet")
+            {
+                if (collision.gameObject.tag == "Bullets")
+                {
+                    Destroy(collision.gameObject);
+                }
+
+                if (collision.gameObject.tag == "Player2" || collision.gameObject.tag == "pesawatP2")
+                {
+                    score.scorePyOne += 1;
+                    Destroy(this.gameObject);
+                }
+            }
+        }*/
+    }
+
+    /*void Die()
+    {
+        score.scorePyTwo += 1;
+        Destroy(this.gameObject);
+    }
+
+    void Matek()
+    {
+        score.scorePyOne += 1;
+        Destroy(this.gameObject);
+    }*/
+
+    void Update()
+    {
+        if (photonView.IsMine)
+        {
+            if (BulletPrefab.tag == "Bullet")
+            {
+                transform.Translate(Vector2.right * Time.deltaTime * speed);
+            }
+
+            else if (BulletPrefab.tag == "Bullets")
+            {
+                transform.Translate(Vector2.left * Time.deltaTime * speed);
+            }
+        }
+
+        else
+        {
+            if (BulletPrefab.tag == "Bullet")
+            {
+                transform.Translate(Vector2.left * Time.deltaTime * speed);
+            }
+
+            else if (BulletPrefab.tag == "Bullets")
+            {
+                transform.Translate(Vector2.right * Time.deltaTime * speed);
+            }
         }
     }
 

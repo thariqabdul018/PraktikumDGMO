@@ -1,33 +1,74 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Photon.Pun;
 
-public class bullet2 : MonoBehaviour {
+public class bullet2 : MonoBehaviourPun
+{
 
-	public float velX = 0f;
-	public float velY = 0f;
-	Rigidbody2D rb;
+    public float speed = 10f;
+    public float destroyTime = 2f;
 
-	// Use this for initialization
-	void Start () {
-		rb = GetComponent<Rigidbody2D> ();
-	}
+    public PhotonView pv;
+    public GameObject CharPrefab;
+    public GameObject BulletPrefab;
 
-	// Update is called once per frame
-	void Update () {
-		rb.velocity = new Vector2 (velX, velY);
-	}
-
-    void OnTriggerEnter2D(Collider2D coll)
+    IEnumerator DestroyBullets()
     {
-        if (coll.gameObject.tag == "bullet" || coll.gameObject.tag == "Player1" || coll.gameObject.tag == "pesawatP1")
+        yield return new WaitForSeconds(destroyTime);
+        this.GetComponent<PhotonView>().RPC("Destroy", RpcTarget.AllBuffered);
+    }
+
+    void Start()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "pesawatP1")
         {
-            Ilang();
+            Die();
+        }
+
+        if (this.gameObject.tag == "bullet2")
+        {
+            if (collision.gameObject.tag == "bullet")
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+
+        else if (this.gameObject.tag == "bullet")
+        {
+            if (collision.gameObject.tag == "bullet2")
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 
-    void Ilang()
+    void Die()
     {
-        Destroy(gameObject);
+        score.scorePyTwo += 1;
+    }
+
+    void Update()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
+        }
+        else
+        {
+            transform.Translate(Vector2.left * Time.deltaTime * speed);
+        }
+    }
+
+    [PunRPC]
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 }

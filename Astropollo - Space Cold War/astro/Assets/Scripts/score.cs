@@ -16,7 +16,7 @@ public class score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Score.text = scorePyOne + " vs " + scorePyTwo;
+		Score.text = scorePyOne + " VS " + scorePyTwo;
 	}
 
     

@@ -8,64 +8,57 @@ using System;
 
 public class player : MonoBehaviourPun, IPunObservable
 {
-
-    //public Vector2 jumpForce = new Vector2 (0, 200);
+    public PhotonView pv;
     public float jumpforce = 20f;
     float directionX;
 
+    public static bool Gasku, Gasmu;
+
     public GameObject projectilePrefab;
 	private List<GameObject> Projectiles = new List<GameObject> ();
-	private float projectileVelocity;
+	private float projectileVelocity = 3;
 
     public Transform bulletSpawn;
 
-	public Text pyOneWin;
-
-	//public Slider gasPyone;
-	//private float gasValue;
+	//public Text pyOneWin;
 
     public Rigidbody2D rb;
+    public float moveSpeed = 10f;
 
     private SpriteRenderer terbang1;
-
     private Vector3 gerakMulus;
+
+    public static bool aku;
+    public static bool kamu;
 	// Use this for initialization
 	void Start () {
-		projectileVelocity = 3;
-		//gasValue = gasPyone.value;
+        if (photonView.IsMine)
+        {
+            this.gameObject.tag = "Player1";
+            projectilePrefab.tag = "Bullet";
+            aku = true;
+            kamu = false;
+        }
+        else
+        {
+            this.gameObject.tag = "Player2";
+            projectilePrefab.tag = "Bullets";
+            aku = false;
+            kamu = true;
+        }
 	}
 
 	// Update is called once per frame
 	void Update () {
-        //gasPyone.value = gasValue;
-        GasValue.GasState += 7 * Time.deltaTime;
-		if (GasValue.GasState > 100) {
-			//gasValue = 100;
-		}
-
-		/*if (Input.GetKeyDown (KeyCode.A) && gasValue > 15) {
-			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
-			GetComponent<Rigidbody2D> ().AddForce (jumpForce);
-			gasValue -= 15;
-
-		}
-
-		if (Input.GetKeyUp (KeyCode.S)) {
-			GameObject bullet = (GameObject)Instantiate (projectilePrefab, transform.position, Quaternion.identity);
-			Projectiles.Add (bullet);
-		}*/
-
 		for (int i = 0; i < Projectiles.Count; i++) {
 			GameObject goBullet = Projectiles [i];
-			if (goBullet != null) {
-				goBullet.transform.Translate (new Vector3 (0, -1) * Time.deltaTime * projectileVelocity);
-
-				Vector3 bulletScreenPos = Camera.main.WorldToScreenPoint (goBullet.transform.position);
-				if (bulletScreenPos.y >= Screen.height || bulletScreenPos.y <= 0) {
-					DestroyObject (goBullet);
-					Projectiles.Remove (goBullet);
-				}
-			}
+            
+		    //Vector3 bulletScreenPos = Camera.main.WorldToScreenPoint (goBullet.transform.position);
+            //if (bulletScreenPos.y >= Screen.height || bulletScreenPos.y <= 0)
+            //{
+                //Destroy(goBullet);
+                //Projectiles.Remove(goBullet);
+            //}
 		}
 
         if (photonView.IsMine)
@@ -78,27 +71,18 @@ public class player : MonoBehaviourPun, IPunObservable
         }
     }
 
-    /*void OnCollisionEnter2D(Collision2D other){
-		Die();
-	}*/
-
-    /*void kondisiMenang (){
-		if (score.scorePyOne = 10) {
-			Time.timeScale = 0;
-			pyOneWin.GetComponent<RectTransform> ().position = new Vector3 (0, 0);
-		}
-	}*/
-
     private void ProcessInputs()
     {
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
-            menColot();
+               menColot();
         }
-
         if (CrossPlatformInputManager.GetButtonDown("Shoot"))
         {
-            meNembak();
+            if (aku == true || kamu == true)
+            {
+                meNembak();
+            }
         }
     }
 
@@ -106,17 +90,6 @@ public class player : MonoBehaviourPun, IPunObservable
     {
         transform.position = Vector3.Lerp(transform.position, gerakMulus, Time.deltaTime * 10);
     }
-
-    /*void OnTriggerEnter2D (Collider2D coll) {
-		if (coll.gameObject.tag == "bullet") {
-			Die ();
-		}
-	}
-
-    void Die()
-    {
-        score.scorePyTwo += 1;
-    }*/
 
     public void resetGemu () {
 		score.scorePyOne = 0;
@@ -128,32 +101,23 @@ public class player : MonoBehaviourPun, IPunObservable
 		Application.Quit ();
 	}
 
-    /*void sovietMenang()
+    private void FixedUpdate()
     {
-        if (score.scorePyOne > score.scorePyTwo)
-        {
-            Application.LoadLevel("sovietmenang");
-
-        }
-    }*/
+        rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
+    }
 
     public void menColot()
     {
-        if (GasValue.GasState >= 15)
+        if (rb.velocity.y == 0)
         {
             rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Force);
-            //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //GetComponent<Rigidbody2D>().AddForce(jumpforce);
-            GasValue.GasState -= 15;
         }
     }
 
     public void meNembak()
     {
         GameObject bullet;
-
-        bullet = PhotonNetwork.Instantiate(projectilePrefab.name, bulletSpawn.position, Quaternion.identity); 
-        //Projectiles.Add(bullet);
+        bullet = PhotonNetwork.Instantiate(projectilePrefab.name, bulletSpawn.position, Quaternion.identity);
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

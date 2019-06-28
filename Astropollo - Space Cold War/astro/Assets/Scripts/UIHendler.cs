@@ -21,6 +21,7 @@ public class UIHendler : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        launcher.instance.UnlockAchievement(GPGSIds.achievement_login);
         print("Room Joined Success");
         PhotonNetwork.LoadLevel(1);
     }
